@@ -174,7 +174,20 @@
  		$dor= $_POST['dor'];
 	 }
 
+	 $sql_Query= "INSERT INTO player (fname,mname,lname,fa_name,mo_name,dob,loc_id,	preset_house,present_street,present_post_code,present_thana,present_district,permanent_house,permanent_street,permanent_post_code,permanent_thana,permanent_district,previous_club_name,previous_from,previous_to,previous_run,previous_wicket,previous_leader,best_performance_club_name,best_performance_opponenet_club,best_performance_event,best_performance_match,best_performance_run,best_performance_wicket,educational_name,educational_institute,educational_board,educational_year,educational_result,membership_id,membership_name,membership_type,membership_registration_date,membership_expiry_year) VALUES ()";
+
+	 if(mysqli_query($con,$sql_Query)){
+
+	 	header("Location: index.php");
+		die();
 	 
+	 }
+	 else{
+	 
+	 echo mysql_error();
+	 
+	 }
+	 mysqli_close($con);
 
 
 ?>
