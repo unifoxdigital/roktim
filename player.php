@@ -94,10 +94,7 @@
  	# code...
  		$totalWickets0= $_POST['totalWickets0'];
 	 }
-	 if (isset($_POST['totalWickets0'])) {
- 	# code...
- 		$totalWickets0= $_POST['totalWickets0'];
-	 }
+	 
 	 if (isset($_POST['teamLeader0'])) {
  	# code...
  		$teamLeader0= $_POST['teamLeader0'];
@@ -174,7 +171,7 @@
  		$dor= $_POST['dor'];
 	 }
 
-	 $sql_Query= "INSERT INTO player (fname,mname,lname,fa_name,mo_name,dob,loc_id,	preset_house,present_street,present_post_code,present_thana,present_district,permanent_house,permanent_street,permanent_post_code,permanent_thana,permanent_district,previous_club_name,previous_from,previous_to,previous_run,previous_wicket,previous_leader,best_performance_club_name,best_performance_opponenet_club,best_performance_event,best_performance_match,best_performance_run,best_performance_wicket,educational_name,educational_institute,educational_board,educational_year,educational_result,membership_id,membership_name,membership_type,membership_registration_date,membership_expiry_year) VALUES ()";
+	 $sql_Query= "INSERT INTO player (fname,mname,lname,fa_name,mo_name,dob,loc_id,	preset_house,present_street,present_post_code,present_thana,present_district,permanent_house,permanent_street,permanent_post_code,permanent_thana,permanent_district,previous_club_name,previous_from,previous_to,previous_run,previous_wicket,previous_leader,best_performance_club_name,best_performance_opponenet_club,best_performance_event,best_performance_match,best_performance_run,best_performance_wicket,educational_name,educational_institute,educational_board,educational_year,educational_result,membership_id,membership_name,membership_type,membership_registration_date,membership_expiry_year) VALUES ('$firstName','$middleName','$lastName','$father','$mother','$dob','$currentlID','$currentHouse','$currentStreet','$currentPost','$currentThana','$currentDistrict','$permanentlID','$permanentHouse','$permanentStreet','$permanentPost','$permanentThana','$permanentDistrict','$clubPlayedFor0','$transferredTo0','$transferredFrom0','$totalRuns0','$totalWickets0','$teamLeader0','$clubFor0','$clubAgainst0','$runs0','$wickets0','$matchID0','$matchID0','$eventID0','$degree0','$dept0','$institute0','$year0','$result0','$memID0','$memName0','$memType0','$regDate0','$expDate0','$dor')";
 
 	 if(mysqli_query($con,$sql_Query)){
 
@@ -184,7 +181,7 @@
 	 }
 	 else{
 	 
-	 echo mysql_error();
+	 	mysql_error();
 	 
 	 }
 	 mysqli_close($con);
